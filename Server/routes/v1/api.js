@@ -12,7 +12,8 @@ export const signUp = function(req, res) {
         name,
         password,
         email,
-        phonenumber
+        phonenumber,
+        classification
     } = req.body
     if(id > 50){
         id = id.slice(0, 50)
@@ -26,7 +27,10 @@ export const signUp = function(req, res) {
     if(phonenumber > 50){
         phonenumber = phonenumber.slice(0, 50)
     }
-    if (!id || !name || !password || !email || !phonenumber) {
+    if(classification > 50){
+        classification = classification.slice(0, 50)
+    }
+    if (!id || !name || !password || !email || !phonenumber || !classification) {
         res.json({
             code: 500,
             v: 'v1',
@@ -57,8 +61,8 @@ export const signUp = function(req, res) {
                     })
                 },
                 (resultData, callback) => {
-                    var sql = 'INSERT INTO user_list (id, name, password, email, phonenumber) values(?, ?, ?, ?, ?)'
-                    connection.query(sql, [id, name, password, email, phonenumber], (err, result) => {
+                    var sql = 'INSERT INTO user_list (id, name, password, email, phonenumber, classification) values(?, ?, ?, ?, ?, ?)'
+                    connection.query(sql, [id, name, password, email, phonenumber, classification], (err, result) => {
                         if (err) {
                             callback({
                                 err: 'QUERY',
