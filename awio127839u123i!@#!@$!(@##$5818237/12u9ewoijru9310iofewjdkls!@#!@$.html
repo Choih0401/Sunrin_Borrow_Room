@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>To world, To future</title>
+        <link rel='stylesheet' href='http://cdn.jsdelivr.net/font-kopub/1.0/kopubdotum.css'>
+        <link rel="stylesheet" href="./css/main.css">
+        <!--<link rel="shortcut icon" href="assets/">-->
+    </head>
+    <body>
+        <div class="side">
+        </div>
+        <div class="login-form">
+            <p class="title">로그인</p>
+            <p class="description">여기엔 아무말이나 적는 거 같다 예를 들면 최현우는 멍청한 원숭이</p>
+            <div class="form-center">
+                <form action="/api/login" method="POST">
+                    <input type="text" class="form-input" name="username" placeholder="Username">
+                    <input type="password" class="form-input" name="password" placeholder="Password">
+                    <input type="submit" class="form-submit" value="로그인">
+                </form>
+            </div>
+            <div class="contain-extra-button">
+                <a href="/register" class="extra-button" id="register">회원가입</a>
+                <a href="#" class="extra-button" id="find-password">비밀번호 찾기</a>
+            </div>
+        </div>
+    </body>
+</html>
