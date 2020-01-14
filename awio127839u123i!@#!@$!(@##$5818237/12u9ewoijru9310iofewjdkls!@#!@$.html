@@ -14,17 +14,19 @@
         <div class="login-form">
             <p class="title">로그인</p>
             <p class="description">여기엔 아무말이나 적는 거 같다 예를 들면 최현우는 멍청한 원숭이</p>
-            <div class="form-center">
-                <form action="/api/login" method="POST">
+            <form class="form-center" action="/api/login" method="POST">
+                <div class="input-padder">
                     <input type="text" class="form-input" name="username" placeholder="Username">
+                </div>
+                <div class="input-padder">
                     <input type="password" class="form-input" name="password" placeholder="Password">
-                    <input type="submit" class="form-submit" value="로그인">
-                </form>
-            </div>
-            <div class="contain-extra-button">
-                <a href="/register" class="extra-button" id="register">회원가입</a>
-                <a href="#" class="extra-button" id="find-password">비밀번호 찾기</a>
-            </div>
+                </div>
+                <input type="submit" class="form-submit" value="로그인">
+                <div class="contain-extra-button">
+                    <a href="/register" class="extra-button" id="register">회원가입</a>
+                    <a href="#" class="extra-button" id="find-password">비밀번호 찾기</a>
+                </div>
+            </form>
         </div>
     </body>
 </html>
